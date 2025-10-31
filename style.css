@@ -55,6 +55,17 @@ h3 {
     transition: border-color 0.3s;
 }
 
+.text-box[readonly] {
+    background-color: #f8f9fa;
+    cursor: default;
+}
+
+.text-box[readonly]:focus {
+    outline: none;
+    border-color: #ddd;
+    box-shadow: none;
+}
+
 .text-box:focus {
     outline: none;
     border-color: #667eea;
@@ -99,5 +110,18 @@ h3 {
     background: white;
     border-radius: 5px;
     min-height: 100px;
+}
+
+.image-container {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.page-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
 }
 
