@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Alex's Website</h1>
+        
+        <h2>About Me</h2>
+        
+        <textarea 
+            id="aboutMeText" 
+            class="text-box" 
+            placeholder="Enter information about yourself here..."
+            rows="10"
+            cols="50"></textarea>
+        
+        <button class="next-button" onclick="goToNextPage()">Next</button>
+    </div>
+    
+    <script>
+        function goToNextPage() {
+            // Get the text from the textarea
+            const text = document.getElementById('aboutMeText').value;
+            
+            // Store it in sessionStorage to pass to next page
+            sessionStorage.setItem('aboutMeText', text);
+            
+            // Navigate to next page
+            window.location.href = 'page2.html';
+        }
+    </script>
+</body>
+</html>
+

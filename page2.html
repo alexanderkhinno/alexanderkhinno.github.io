@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page - Alex's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Alex's Website</h1>
+        
+        <h2>Page 2</h2>
+        
+        <div class="content-box">
+            <h3>Your "About Me" Text:</h3>
+            <p id="displayText" class="display-text"></p>
+        </div>
+        
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <script>
+        // Get the text from sessionStorage and display it
+        const savedText = sessionStorage.getItem('aboutMeText');
+        const displayElement = document.getElementById('displayText');
+        
+        if (savedText) {
+            displayElement.textContent = savedText || 'No text was entered.';
+        } else {
+            displayElement.textContent = 'No text was entered.';
+        }
+        
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
+
